@@ -1,0 +1,229 @@
+@import url("checkmark.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.recipe-title, .recipe-description, .recipe-image, .recipe-caracteristics, .ingredients-section, .instructions-section {
+    margin: 10px;
+}
+
+/* recipe-title */
+.recipe-title h1 {
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+/* recipe-description */
+.recipe-description {
+    font-size: 9px;
+    color: #686868;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-top: -5px;
+}
+
+/* recipe-image */
+.recipe-image {
+    width: 96vw;
+    margin: auto;
+}
+
+/* recipe-caracteristics */
+.recipe-caracteristics .caracteristic {
+    width: 28%;
+    display: inline grid;
+    grid-template-columns: 20px 1fr;
+    grid-template-rows: repeat(2, 20px);
+    padding: 5px;
+}
+
+.recipe-caracteristics .caracteristic:first-child {
+    display: block grid;
+}
+
+.recipe-caracteristics .caracteristic span {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    justify-self: center;
+    font-size: 20px;
+}
+
+.recipe-caracteristics .caracteristic .especification {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    font-size: 12px;
+    align-self: center;
+    margin-left: 3px;
+    color: #989898;
+}
+
+.recipe-caracteristics .caracteristic .information {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    font-size: 16px;
+    align-self: center;
+    margin-left: 3px;
+    color: #606060;
+}
+
+.recipe-caracteristics .caracteristic span.gold, .recipe-caracteristics .caracteristic .information.gold {
+    color: #ffbb00;
+}
+
+/* ingredients-section */
+.ingredients-section h4 {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    color: #686868;
+}
+
+.ingredients-section .food-ingredient {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+    padding: 6px 0px;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-right: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* instructions-section */
+.instructions-section h3 {
+    font-weight: 900;
+}
+
+.instructions-section .instruction{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 5px;
+    padding: 10px 0px;
+}
+
+.instructions-section .instrucion-number {
+    color: #fff;
+    font-weight: 700;
+    background-color: #ffbb00;
+    grid-column: 1 / span 1;
+    align-self: flex-start;
+    justify-self: center;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.instructions-section .instruciont-details {
+    grid-column: 2 / span 1;
+}
+
+@media screen and (min-width: 400px) {
+    .content {
+        width: 80%;
+        margin: auto;
+    }
+    
+    /* recipe-title */
+    .recipe-title h1 {
+        font-size: 40px;
+        margin: 25px 0px -4px;
+    }
+    
+    /* recipe-description */
+    .recipe-description {
+        font-size: 9px;
+        color: #686868;
+        display: grid; 
+        grid-template-columns: 30px 470px;
+        margin: 0px 0px 30px;
+    }
+
+    .recipe-description span {
+        font-size: 17px;
+    }
+    
+    /* recipe-image */
+    .recipe-image {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    /* recipe information (contains recipe-caracteristics and ingredients-section) */
+    .recipe-information {
+        display: grid;
+        grid-template-columns: 1fr 180px;
+        grid-template-rows: auto 1fr;
+        margin-top: 40px;
+    }
+
+    /* recipe caracteristics */
+    .recipe-caracteristics {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        border-radius: 9px;
+        box-shadow: 0px 0px 8px 1px rgba(217,217,217,0.75);
+        -webkit-box-shadow: 0px 0px 8px 1px rgba(217,217,217,0.75);
+        -moz-box-shadow: 0px 0px 8px 1px rgba(217,217,217,0.75);
+        height: fit-content;
+        margin-right: 0px;
+    }
+
+    .recipe-caracteristics .caracteristic {
+        width: fit-content;
+        margin: auto;
+        display: block grid;
+        padding: 20px 10px;
+    }
+    
+    .recipe-caracteristics .caracteristic:first-child {
+        padding-top: 40px;
+    }
+
+    /* ingredients section */
+    .ingredients-section {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        height: fit-content;
+        flex-shrink: 2;
+        margin-right: 40px;
+    }
+
+    /* instructions section */
+    .instructions-section {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        height: fit-content;
+        margin-right: 40px;
+    }
+}
+
+
+@media screen and (min-width: 1300px) {
+    .content {
+        width: 65%;
+    }
+
+    .ingredients-section {
+        margin-right: 100px;
+    }
+
+    .instructions-section {
+        margin-right: 100px;
+    }
+}

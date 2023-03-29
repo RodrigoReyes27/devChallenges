@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+    color: #fff;
+}
+
+body {
+    background-color: #111;
+}
+
+.hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: fit-content;
+    background-color: #111;
+}
+
+/* 
+HEADER AND NAVIGATION
+*/
+
+.header {
+    flex-basis: 50px;
+}
+
+.nav__responsive-ul {
+    padding: 0;
+    list-style-type: none
+}
+
+.nav__responsive-title-container {
+    display: grid;
+    grid-template-columns: 120px 1fr 40px;
+    padding: 14px 10px;
+}
+
+.nav__responsive-title {
+    display: inline-block;
+    grid-column: 1 / span 1;
+}
+
+.nav__responsive-title p {
+    color: #777;
+    border: 2px solid #777;
+    padding: 5px;
+}
+
+.nav__responsive-button {
+    display: inline-block;
+    justify-self: flex-end;
+    grid-column: 3 / span 1;
+    padding-top: 3px;
+    font-size: 24px;
+}
+
+.nav__responsive-li-container {
+    position: absolute;
+    height: 80vh;
+    text-align: center;
+    inset: 0 0 auto 0;
+    transition: top 0.2s ease-out;
+}
+
+.nav__responsive-cross {
+    position: absolute;
+    top: 20px;
+    right: clamp(30px, 50px, 70px);
+    height: 30px;
+    filter: invert(99%) sepia(6%) saturate(471%) hue-rotate(207deg) brightness(123%) contrast(100%);
+}
+
+.nav__responsive-li {
+    padding: 12px;
+}
+
+.nav__responsive-li:nth-child(2) {
+    margin-top: clamp(60px, 180px, 250px);
+}
+
+/* For Phones in landscape mode */
+@media screen and (max-height: 400px){
+    .nav__responsive-li:nth-child(2) {
+        margin-top: 40px;
+    }
+}
+
+.nav__responsive-li a{
+    text-decoration: none;
+    font-size: 28px;
+    color: #999;
+}
+
+.nav__responsive-li:hover a, .nav__responsive-li:active a{
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 11px;
+}
+
+/* 
+MAIN 
+*/
+
+.main {
+    flex-basis: 300px;
+    flex-grow: 3;
+    flex-shrink: 0;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.main__left-container h1 {
+    padding: 10px 0px;
+    font-size: 40px;
+}
+
+.main__left-container p {
+    width: 60%;
+    color: #999;
+    padding: 15px 0px;
+}
+
+.main__left-container a {
+    font-weight: 900;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.main__right-container {
+    text-align: center;
+}
+
+.main__example-image {
+    width: 96%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+.main__card {
+    max-width: 450px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 35px 35px 60px;
+    position: absolute;
+    margin-top: -140px;
+    right: clamp(20px, 30px, 200px);
+    padding-left: 10px;
+    text-align: left;
+    gap: 0px 10px;
+    background-color: #111;
+    box-shadow: 0px 10px #000;
+    z-index: 20;
+}
+
+.main__card-image {
+    width: 70%;
+    border-radius: 8em;
+    display: inline-block;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+
+.main__person-name {
+    display: inline-block;
+    font-size: 15px;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    align-self: flex-end;
+    color: #ccc;
+}
+
+.main__person-role {
+    display: inline-block;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    align-self: center;
+    font-size: 15px;
+    color: #555;
+}
+
+.main__description {
+    display: inline-block;
+    width: 80%;
+    grid-column: 1 / 3;
+    grid-row: 3 / span 1;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* 
+FOOTER
+*/
+.footer {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.footer__content {
+    margin-top: 10px;
+    color: rgba(180, 180, 180);
+    font-size: 12px;
+}
+
+.footer__content b {
+    text-decoration: underline;
+}
+
+/* 
+STYLE FOR DESKTOP
+*/
+@media screen and (min-width:768px){
+    .nav__ul {
+        display: grid;
+        grid-template-columns: 200px 100px 1fr;
+        padding: 0;
+    }
+
+    .nav__title p {
+        display: inline-block;
+        grid-column: 1 / span 1;
+        color: #777;
+        border: 2px solid #777;
+        padding: 5px;
+        font-size: 18px;
+        margin-top: 26px;
+        margin-left: 50px;
+    }
+
+    .nav__li-container {
+        grid-column: 3 / span 1;
+        flex-shrink: 0;
+        text-align: right;
+    }
+
+    .nav__li {
+        display: inline-block;
+        font-size: 22px;
+        margin-top: 35px;
+        margin-right: 80px;
+    }
+
+    .nav__li a {
+        text-decoration: none;
+        color: #999;
+    }
+
+    .nav__li:hover a, .nav__li:active a{
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+    }
+}

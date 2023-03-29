@@ -1,0 +1,42 @@
+.contact-form p {
+    font-size: 15px;
+    color: var(--gray);
+    margin-bottom: 5px;
+}
+/* custom input */
+.input-container {
+    width: 300px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    color: var(--gray);
+    background-color: var(--light-gray);
+    border: 0;
+    border-radius: 12px;
+    padding: 10px 100px 10px 20px;
+    line-height: 1;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.input-container button {
+    position: absolute;
+    right: 3px; 
+    top: 3px;
+    bottom: 3px;
+    border: 0;
+    background: var(--blue);
+    color: #fff;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 8px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.input-container button:active {
+    background-color: var(--green);
+}

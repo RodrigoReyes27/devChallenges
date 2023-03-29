@@ -1,0 +1,22 @@
+@import url('./constants.css');
+
+.pac-container {
+    background-color: #181a2e;
+    border: none;
+}
+
+.pac-item {
+    border-color: var(--light-gray);
+}
+
+.pac-item:hover {
+    background-color: var(--dark-blue);
+}
+
+.pac-matched {
+    color: var(--light-gray);
+}
+
+.pac-item-query {
+    color: var(--gray);
+}

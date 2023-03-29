@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header, .main, .footer {
+    padding: 20px;
+}
+
+.header {
+    flex-basis: 40px;
+    letter-spacing: -2px;
+    font-size: 12px;
+}
+
+.header h1 {
+    margin-top: 10px;
+    margin-left: 45px;
+}
+
+.main {
+    flex-basis: 300px;
+    flex-grow: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 600px));
+    padding: 0 50px;
+    justify-content: center;
+}
+
+.footer {
+    flex-basis: 40px;
+    text-align: center;
+}
+
+.main-item {
+    padding: 50px;
+}
+
+.main-item:first-child {
+    grid-column: 1 / span 1;
+    text-align: right;
+}
+
+.main-item:nth-child(2) {
+    grid-column: 2 / span 1;
+}
+
+.main-item:first-child img {
+    margin-top: 60px;
+    width: 80%;
+}
+
+.main-item:nth-child(2) h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 50px;
+}
+
+.main-item:nth-child(2) p {
+    padding-top: 25px;
+    margin-bottom: 40px;
+    width: 60%;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.main-item:nth-child(2) a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #353839;
+    padding: 17px 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer__content {
+    margin-top: 10px;
+    color: rgba(180, 180, 180);
+    font-size: 12px;
+}
+
+.footer__content b {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px){
+    .header h1 {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    
+    .main {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .main-item {
+        padding: 15px;
+    }
+
+    .main-item:first-child {
+        text-align: center;
+        padding: 10px;
+        margin-top: 0;
+    }
+    
+    .main-item:nth-child(2) h2{
+        margin-top: 10px;
+    }
+
+    .main-item:nth-child(2) p{
+        width: 85%;
+    }
+}

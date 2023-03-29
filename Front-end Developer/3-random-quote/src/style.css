@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #root, main {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* RANDOM BUTTON */
+.btn-random {
+    margin-inline: auto 0;
+    display: block;
+    padding: 1rem clamp(1rem, 5vw, 3rem);
+}
+
+.quotes-container {
+    width: calc(100vw - 2 * clamp(1rem, 20vw, 20rem));
+    margin-inline: auto;
+}
+
+/* QUOTE */
+.quote {
+    max-width: 100%;
+    font-size: 2rem;
+    border-left: 6px solid #F7DF94;
+    padding-inline: 2rem;
+    margin-block: 5rem 6rem;
+}
+
+/* AUTHOR */
+.btn-author {
+    font-size: 1.75rem;
+    border-left: 6px solid #F7DF94;
+    width: 100%;
+    padding: 2rem;
+    text-align: left;
+}
+
+.btn-author i {
+    font-size: 0.75em;
+    vertical-align: middle;
+    float: right;
+}
+
+.btn-author:hover {
+    color: #fff;
+    background-color: #333333;
+}
+
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

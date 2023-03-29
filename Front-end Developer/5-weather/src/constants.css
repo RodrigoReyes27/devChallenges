@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;700;800&display=swap');
+
+:root {
+    --dark-blue: #1E213A;
+    --blue: #3C47E9;
+    --darker-blue: #100E1D;
+    --light-blue: #9399f2;
+    --gray: #6E707A;
+    --dark-gray: #616475;
+    --light-gray: #E7E7EB;
+    --yellow: #FFEC65;
+    --dark-purple: #585676;
+}

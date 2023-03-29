@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header, .main, .footer {
+    padding: 20px 10px;
+}
+
+.main__title {
+    display: none;
+}
+
+.main__responsive-title h2{
+    margin: 20px 0 20px;
+}
+
+.members-content {
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-auto-rows: minmax(280px, 320px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.members-item {
+    padding-top: 20px;
+}
+
+.members-item:nth-child(even) {
+    align-self: flex-end;
+}
+
+.member-name {
+    font-weight: 900;
+}
+
+.member-role {
+    max-width: 10%;
+    writing-mode: vertical-rl;
+    float: right;
+}
+
+.members-item img {
+    width: 88%;
+    object-fit: contain;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer__content {
+    margin-top: 10px;
+    color: rgba(180, 180, 180);
+    font-size: 12px;
+}
+
+.footer__content b {
+    text-decoration: underline;
+}
+
+@media screen and (min-width:700px) {
+    .main__responsive-title {
+        display: none;
+    }
+
+    .main__title {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: auto;
+    }
+
+    .main__title-left {
+        justify-self: flex-start;
+        grid-column: 1 / span 1;
+    }
+
+    .main__title-right {
+        grid-column: 2 / span 1;
+        font-size: 14px;
+    }
+
+    .main__title-right h2 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .members-content {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(130px, 180px));
+        grid-auto-rows: minmax(280px, 320px);
+        gap: 10px 50px;
+        margin: auto;
+        padding-top: 30px;
+    }
+
+    .members-item:nth-child(even) {
+        align-self: flex-start;
+    }
+
+    .members-item:nth-child(2), .members-item:nth-child(5) {
+        align-self: flex-end;
+    }
+}

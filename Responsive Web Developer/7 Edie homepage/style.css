@@ -1,0 +1,589 @@
+@import url("input.css");
+
+:root {
+    --matte-black: #28282B;
+    --gray: #71797E;
+    --light-gray: #F1F1F1;
+    --white: #F9F9F9;
+    --blue: #0096FF;
+    --green: #00A36C;
+    --red: #FA5F55;
+    --dark-blue: #111936;
+}
+    
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: var(--matte-black);
+}
+
+.hide {
+    position: absolute !important;
+    top: -9999px !important;
+}
+
+/* 
+content-container 
+*/
+.content-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header, main, footer {
+    padding: 12px;
+}
+
+/* 
+header 
+*/
+header {
+    flex-basis: 70px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 70px;
+    width: 100%;
+}
+
+header .marca {
+    font-size: 25px;
+    font-weight: 800;
+    position: absolute;
+    padding: 20px 0px;
+}
+
+/* nav for tablets and desktop */
+header nav .nav-ul {
+    float: right;
+    margin-right: 50px;
+    z-index: 10;
+}
+
+header nav .nav-ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0px 15px;
+}
+
+/* nav for mobiles */
+header nav .nav-responsive-ul {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    background-color: var(--white);
+    transition: top 0.3s ease-out;
+    margin-left: -12px;
+}
+
+header nav .nav-responsive-ul li {
+    display: block;
+    line-height: 20px;
+    margin: 6px 15px;
+}
+
+header .navigation-container li a {
+    display: inline-block;
+    font-size: 18px;
+}
+
+header .navigation-container li a:hover {
+    color: var(--blue);
+}
+
+header nav .responsive-button.checkbtn {
+    font-size: 30px;
+    float: right;
+    line-height: 70px;
+    cursor: pointer;
+}
+
+header nav .responsive-button.checkbtn:hover {
+    color: var(--blue);
+}
+/* 
+main 
+*/
+main {
+    flex-basis: 500px;
+    flex-grow: 2;
+}
+
+/* main main-content */
+main .question-text {
+    color: var(--blue);
+    font-size: 15px;
+    margin: 20px 0px 5px 20px;
+}
+
+main h1 {
+    font-size: 30px;
+    font-weight: 800;
+    width: 80%;
+    margin-left: 20px;
+}
+
+main .main-image {
+    width: 100%;
+    border-radius: 26px;
+    margin-top: 22px;
+}
+
+/* purpose-container */
+main .purpose-container h2 {
+    font-size: 30px;
+    font-weight: 800;
+    width: 60%;
+    margin: 25px 0px 18px 20px;
+}
+
+main .purpose-container p {
+    font-size: 16px;
+    width: 80%;
+    margin-left: 20px;
+}
+
+/*  contact-form */
+main .contact-form p {
+    color: var(--gray);
+    margin: 22px 0px 0px 20px;
+}
+
+/* custom input */
+main .contact-form {
+    width: 80%;
+}
+
+/* services-container */
+main .services-container {
+    margin: 60px 0px 0px 20px;
+}
+
+main .services-container h2 {
+    font-size: 30px;
+    font-weight: 800;
+    width: 80%;
+}
+
+/* service-item */
+main .services-container .service-item {
+    margin: 20px 0px 0px -20px;
+    padding: 35px 0px 35px 20px;
+    transition: box-shadow 0.5s;
+}
+
+main .services-container .service-item:hover {
+    border-radius: 12px;
+    box-shadow: 4px 6px 10px 3px rgba(207,207,207,0.75);
+    -webkit-box-shadow: 4px 6px 10px 3px rgba(207,207,207,0.75);
+    -moz-box-shadow: 4px 6px 10px 3px rgba(207,207,207,0.75);
+}
+
+main .services-container .service-item i {
+    color: var(--light-gray);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+main .services-container .service-item i.blue {
+    background-color: var(--blue);
+}
+
+main .services-container .service-item i.green {
+    background-color: var(--green);
+}
+
+main .services-container .service-item i.red {
+    background-color: var(--red);
+}
+
+main .services-container .service-item h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 25px 0px;
+}
+
+main .services-container .service-item p {
+    font-size: 18px;
+    width: 85%;
+}
+
+main .services-container .service-item button {
+    font-size: 16px;
+    color: var(--gray);
+    margin-top: 20px;
+    border: 0;
+    border-radius: 15px;
+    padding: 11px;
+    background-color: var(--light-gray);
+    transition: background-color 0.5s,
+                color 0.5s;
+}
+
+main .services-container .service-item:hover button {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+/* design-container */
+main .design-container {
+    margin-top: 60px;
+}
+
+main .design-container h2 {
+    font-size: 30px;
+    font-weight: 800;
+    width: 75%;
+    margin: 0px 0px 20px 20px;
+}
+
+/* design-item */
+main .design-container .design-item {
+    margin-top: 40px;    
+}
+
+main .design-container .design-item img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+main .design-container .design-item .category {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+main .design-container .design-item .example {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* team-container */
+main .team-container {
+    margin-top: 60px;
+}
+
+main .team-container .team-meet {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--red);
+}
+
+main .team-container .team-description {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 15px 0px;
+}
+
+main .team-container .team-information {
+    font-size: 18px;
+}
+
+main .team-container .team-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, fit-content);
+    gap: 10px;
+    margin: 30px 0px 55px;
+}
+
+main .team-container .team-images img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+main .team-container .team-images img:first-child {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+
+main .team-container .team-images img:nth-child(2) {
+    width: 88%;
+}
+
+/* reviews-container */
+main .reviews-container .review-text {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+main .reviews-container .reviewer-container {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 50px 30px;
+    gap: 10px;
+    margin: 15px 0px 70px;
+    align-items: flex-end;
+}
+
+main .reviews-container .reviewer-container img {
+    width: 100%;
+    border-radius: 15px;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+}
+
+main .reviews-container .reviewer-container .reviewer-name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+main .reviews-container .reviewer-container .reviewer-corporation {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+/* footer */
+footer {
+    background-color: var(--dark-blue);
+}
+
+/* nav */
+footer nav .nav-ul {
+    margin-left: 20px;
+}
+
+footer nav .nav-ul li a {
+    display: inline-block;
+    font-size: 20px;
+    color: var(--white);
+    margin: 4px 0px;
+}
+
+footer nav .nav-ul li a:hover {
+    color: var(--blue);
+}
+
+/* Edie-networks */
+footer .Edie-networks {
+    margin: 30px 0px 30px 20px;
+}
+
+footer .Edie-networks p {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+footer .Edie-networks img {
+    padding: 6px 12px 0px 0px;
+}
+
+/* contact-form */
+footer .contact-form {
+    margin-bottom: 45px;
+}
+
+footer .contact-form p {
+    margin-left: 20px;
+}
+
+/* Phones in portrait */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px-768px) */
+@media only screen and (min-width: 600px) {
+    /* .services-items-container */
+    main .services-container .services-items-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main .services-container .services-items-container .service-item {
+        width: 33%;
+    }
+
+    /* .design-items-container */
+    main .design-container h2 {
+        width: 35%;
+        margin-bottom: 65px;
+    }
+
+    main .design-container .design-items-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main .design-container .design-items-container .design-item {
+        width: 48%;
+        margin-bottom: 40px;
+    }
+
+    main .design-container .design-items-container .design-item:nth-child(even) {
+        margin-top: -65px;
+    }
+
+    /* team-container */
+    main .team-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 35px;
+        margin-top: 0;
+    }
+
+    main .team-container .team-caracteristics-container {
+        align-self: center;
+    }
+
+
+    /* footer */
+    footer {
+        height: 220px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    footer nav .nav-ul li a {
+        font-size: 15px;
+    }
+
+    footer .Edie-networks {
+        margin: 0;
+    }
+    footer .Edie-networks p {
+        font-size: 22px;
+    }
+}
+
+/* Medium devices (landscape iphone, 768px-992px) */
+@media only screen and (min-width: 769px){
+    /* 
+    header 
+    */
+    header .marca {
+        padding: 20px 30px;
+    }
+    
+    /* 
+    main 
+    */
+    main .main-image {
+        display: block;
+        width: 96%;
+        margin: auto;
+    }
+
+    /* margin changes */
+    main .question-text, main h1 {
+        margin-left: 80px;
+        width: 380px;
+    }
+
+    main .purpose-container, main .contact-form {
+        margin-left: 80px;
+        width: 420px;
+    }
+
+    main .services-container h2, main .design-container h2 {
+        width: 30%;
+    }
+
+    main .services-container, main .design-container, main .team-container, main .reviews-container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    main .design-container h2 {
+        margin-left: 0px;
+    }
+
+    /* font-size changes */
+    main h1, main .purpose-container h2 {
+        font-size: 40px;
+    }
+
+    /* 
+    footer 
+    */
+    footer nav {
+        margin-left: 30px;
+    }
+
+    footer .contact-form {
+        margin-right: 30px;
+    }
+}
+
+/* Large devices (laptops/desktops, tablets in landscape, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* margin changes */
+    main .question-text, main h1, main .purpose-container, main .contact-form {
+        margin-left: 100px;
+    }
+
+    main .services-container, main .design-container, main .team-container, main .reviews-container {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    main .design-container h2 {
+        margin-left: 0px;
+    }
+
+    /* size change */
+    main .services-container .services-items-container .service-item {
+        width: 28%;
+    }
+
+    main .design-container .design-items-container .design-item {
+        width: 47%;
+    }
+
+    /* 
+    footer 
+    */
+    footer nav {
+        margin-left: 100px;
+    }
+
+    footer .contact-form {
+        margin-right: 100px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    main .main-image {
+        display: block;
+        width: 86%;
+        margin: auto;
+    }
+
+    /* margin changes */
+    main .question-text, main h1, main .purpose-container, main .contact-form {
+        margin-left: 260px;
+    }
+
+    main .services-container, main .design-container, main .team-container, main .reviews-container {
+        margin-left: 220px;
+        margin-right: 220px;
+    }
+
+    /* size change */
+    main .services-container .services-items-container .service-item {
+        width: 28%;
+    }
+
+    main .design-container .design-items-container .design-item {
+        width: 47%;
+    }
+
+    /* 
+    footer 
+    */
+    footer nav {
+        margin-left: 220px;
+    }
+
+    footer .contact-form {
+        margin-right: 220px;
+    }
+}
